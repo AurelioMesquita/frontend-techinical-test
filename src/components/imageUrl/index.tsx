@@ -1,14 +1,22 @@
 import React from "react";
-import { ImgContainer, UrlComponent, UrlTitle, UrlDescription } from "./styles";
+import {
+  Container,
+  ImgContainer,
+  UrlComponent,
+  UrlTitle,
+  UrlDescription,
+} from "./styles";
 export default function ImageUrl({ imageUrl }: any) {
   return (
     <>
-      <div>
-        <ImgContainer src={imageUrl.image} />
-        <UrlComponent>{imageUrl.url}</UrlComponent>
-        <UrlTitle>{imageUrl.title}</UrlTitle>
-        <UrlDescription>{imageUrl.description}</UrlDescription>
-      </div>
+      {imageUrl.length > 0 && (
+        <Container>
+          <ImgContainer src={imageUrl[0].image} />
+          <UrlComponent>{imageUrl[0].url}</UrlComponent>
+          <UrlTitle>{imageUrl[0].title}</UrlTitle>
+          <UrlDescription>{imageUrl[0].description}</UrlDescription>
+        </Container>
+      )}
     </>
   );
 }

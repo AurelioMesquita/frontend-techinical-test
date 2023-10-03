@@ -1,18 +1,11 @@
 import React, { useState } from "react";
-import {
-  Button,
-  ButtonContainer,
-  Img,
-  ImgContainer,
-  StyledLink,
-} from "./styles";
+import { Button, ButtonContainer, Img, ImgContainer } from "./styles";
 import googleimage from "../../assets/google.png";
 import { Autocomplete } from "../autocomplete";
 import Exceptions from "../exceptions";
 import { useSelector } from "react-redux";
 import { useSearch } from "../../redux/sliceSearch";
 import { useInputSearch } from "../../redux/sliceInputSearch";
-
 export function Body() {
   const searching = useSelector(useSearch);
   const inputSearching = useSelector(useInputSearch);

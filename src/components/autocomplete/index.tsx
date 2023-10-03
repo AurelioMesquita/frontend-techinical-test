@@ -11,6 +11,7 @@ import { addInputSearch, useInputSearch } from "../../redux/sliceInputSearch";
 import { addSearch, empty, reset } from "../../redux/sliceSearch";
 
 import { SearchData } from "../../interfaces/Search";
+import { emptyResult, resetResult } from "../../redux/sliceResult";
 
 export function Autocomplete() {
   const dispatch = useDispatch();

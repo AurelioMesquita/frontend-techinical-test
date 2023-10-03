@@ -16,6 +16,7 @@ export const Img = styled.img`
 `;
 export const DataItens = styled.div`
   display: flex;
+  background-color: #ffffff;
   padding: 16px 10px;
   gap: 10px;
   &:hover {

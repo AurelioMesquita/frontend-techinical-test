@@ -22,6 +22,7 @@ export const TextComponent = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: border-color 0.2s, box-shadow 0.2s;
   border: 1px solid black;
+
   &:focus {
     border-color: #4285f4;
   }
@@ -41,12 +42,13 @@ export const DataComponents = styled.div`
   justify-content: center;
   margin: 0 auto;
   width: 50%;
+  align-items: center;
   border-radius: 0 0 5% 5%;
   max-width: 500px;
   max-height: 300px;
   overflow: hidden;
   overflow-y: auto;
-
+  z-index: 3;
   &::-webkit-scrollbar {
     display: none;
   }

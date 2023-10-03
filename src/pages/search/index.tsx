@@ -4,8 +4,8 @@ import Footer from "../../components/footer";
 import Searching from "../../components/searching";
 import { useDispatch } from "react-redux";
 import { addInputSearch } from "../../redux/sliceInputSearch";
-import { addSearch, empty } from "../../redux/sliceSearch";
 import { SearchData } from "../../interfaces/Search";
+import { addResult, emptyResult } from "../../redux/sliceResult";
 
 export default function Search() {
   const dispatch = useDispatch();
@@ -17,9 +17,9 @@ export default function Search() {
     ? JSON.parse(storedStateInput)
     : null;
 
-  dispatch(empty());
+  dispatch(emptyResult());
   parsedState.map((value: SearchData) => {
-    dispatch(addSearch(value));
+    dispatch(addResult(value));
   });
   dispatch(addInputSearch(parsedStateInput));
 
